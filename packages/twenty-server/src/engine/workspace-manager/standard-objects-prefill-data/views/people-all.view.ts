@@ -52,15 +52,6 @@ export const peopleAllView = (
       {
         fieldMetadataId:
           objectMetadataStandardIdToIdMap[STANDARD_OBJECT_IDS.person].fields[
-            PERSON_STANDARD_FIELD_IDS.company
-          ],
-        position: 3,
-        isVisible: true,
-        size: 150,
-      },
-      {
-        fieldMetadataId:
-          objectMetadataStandardIdToIdMap[STANDARD_OBJECT_IDS.person].fields[
             PERSON_STANDARD_FIELD_IDS.phones
           ],
         position: 4,

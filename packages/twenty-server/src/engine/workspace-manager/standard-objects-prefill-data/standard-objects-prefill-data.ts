@@ -6,6 +6,7 @@ import { WorkspaceEntityManager } from 'src/engine/twenty-orm/entity-manager/wor
 import { shouldSeedWorkspaceFavorite } from 'src/engine/utils/should-seed-workspace-favorite';
 import { companyPrefillData } from 'src/engine/workspace-manager/standard-objects-prefill-data/company';
 import { personPrefillData } from 'src/engine/workspace-manager/standard-objects-prefill-data/person';
+import { promotoraPrefillData } from 'src/engine/workspace-manager/standard-objects-prefill-data/promotora';
 import { seedViewWithDemoData } from 'src/engine/workspace-manager/standard-objects-prefill-data/seed-view-with-demo-data';
 
 export const standardObjectsPrefillData = async (
@@ -39,6 +40,7 @@ export const standardObjectsPrefillData = async (
   mainDataSource.transaction(async (entityManager: WorkspaceEntityManager) => {
     await companyPrefillData(entityManager, schemaName);
     await personPrefillData(entityManager, schemaName);
+    await promotoraPrefillData(entityManager, schemaName);
     const viewDefinitionsWithId = await seedViewWithDemoData(
       entityManager,
       schemaName,

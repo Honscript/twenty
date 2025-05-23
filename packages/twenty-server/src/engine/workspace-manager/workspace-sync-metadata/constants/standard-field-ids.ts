@@ -45,6 +45,7 @@ export const ATTACHMENT_STANDARD_FIELD_IDS = {
   note: '20202020-4f4b-4503-a6fc-6b982f3dffb5',
   person: '20202020-0158-4aa2-965c-5cdafe21ffa2',
   company: '20202020-ceab-4a28-b546-73b06b4c08d5',
+  promotora: '20202020-4f2b-4a0c-8d3e-1f5b7a6c9d0e',
   opportunity: '20202020-7374-499d-bea3-9354890755b5',
   custom: '20202020-302d-43b3-9aea-aa4f89282a9f',
 };
@@ -143,6 +144,32 @@ export const COMPANY_STANDARD_FIELD_IDS = {
   searchVector: '85c71601-72f9-4b7b-b343-d46100b2c74d',
 };
 
+
+export const PROMOTORA_STANDARD_FIELD_IDS = {
+  id: 'f7f7ca94-4cc9-47d9-bb7e-c7eeaaba41b1',
+  name: '63afdcb9-5584-43ba-b8a7-b09a3e804355',
+  domainName: '61b39bba-1f67-44c7-a34e-9264c4645eb1',
+  address: '61b39bba-1f67-44c7-a34e-9264c4645eb1',
+  employees: 'f0b427fe-4fbb-4bce-9a4d-0503423359dc',
+  linkedinLink:'98bec463-08c6-4a5e-bf74-ae884598fa21',
+  xLink: 'bf364f68-f4c2-4e84-a2ec-b36ffdfb6c6d',
+  annualRecurringRevenue:'2d7e7e8a-87d0-4992-b728-12104304adaa',
+  idealCustomerProfile: '3f356ae9-5288-4dfd-92aa-055ae1a5b3bd',
+  position: 'f9dece3b-5065-4451-af68-b64211519c28',
+  createdBy: '774ac542-041a-4205-8bd4-62691d3f5447',
+  people: '85260365-4e31-4dcc-8790-af767e12a568',
+  accountOwner: 'a43adedb-0d70-4f1a-8bc7-87c17732c06c',
+  activityTargets: 'b24d9e03-13e2-419b-87f5-c0beca93406a',
+  taskTargets: '0ef7d7e9-7751-40c9-a96a-1666d65f5acb',
+  noteTargets: 'dc8f9152-5fb5-4b15-a5bf-bdd3f134f222',
+  opportunities: 'afad9866-dc11-40c9-99d7-2ad93ed099e2',
+  favorites: 'dab2c20a-7018-43c8-b40c-bc0a55415c7a',
+  attachments: 'ac1cdc78-9bd8-4377-b79c-c2e5b90e7fbf',
+  timelineActivities: 'fe242b35-6aaf-4ad6-bacb-f53ab9ba36e3',
+  searchVector: '54479faa-31f9-4a7d-8e81-b8143912380c',
+};
+
+
 export const CONNECTED_ACCOUNT_STANDARD_FIELD_IDS = {
   handle: '20202020-c804-4a50-bb05-b3a9e24f1dec',
   provider: '20202020-ebb0-4516-befc-a9e95935efd5',
@@ -192,6 +219,7 @@ export const TIMELINE_ACTIVITY_STANDARD_FIELD_IDS = {
   workspaceMember: '20202020-af23-4479-9a30-868edc474b36',
   person: '20202020-c414-45b9-a60a-ac27aa96229f',
   company: '20202020-04ad-4221-a744-7a8278a5ce21',
+  promotora: '20202020-5322-499c-8906-5eaacb4037b8',
   opportunity: '20202020-7664-4a35-a3df-580d389fd527',
   task: '20202020-b2f5-415c-9135-a31dfe49501b',
   note: '20202020-ec55-4135-8da5-3a20badc0156',
@@ -216,6 +244,7 @@ export const FAVORITE_STANDARD_FIELD_IDS = {
   task: '20202020-1b1b-4b3b-8b1b-7f8d6a1d7d5c',
   note: '20202020-1f25-43fe-8b00-af212fdde824',
   view: '20202020-5a93-4fa9-acce-e73481a0bbdf',
+  promotora: '20202020-4a71-41b0-9f83-9cdcca3f8b14',
   custom: '20202020-855a-4bc8-9861-79deef37011f',
   favoriteFolder: '20202020-f658-4d12-8b4d-248356aa4bd9',
 };
@@ -310,6 +339,7 @@ export const NOTE_TARGET_STANDARD_FIELD_IDS = {
   company: 'c500fbc0-d6f2-4982-a959-5a755431696c',
   opportunity: '20202020-4e42-417a-a705-76581c9ade79',
   custom: '20202020-3d12-4579-94ee-7117c1bad492',
+  promotora: '20202020-4a71-41b0-9f83-9cdcca3f8b14', 
 };
 
 export const OPPORTUNITY_STANDARD_FIELD_IDS = {
@@ -395,6 +425,7 @@ export const TASK_TARGET_STANDARD_FIELD_IDS = {
   person: '20202020-c8a0-4e85-a016-87e2349cfbec',
   company: '20202020-4703-4a4e-948c-487b0c60a92c',
   opportunity: '20202020-6cb2-4c01-a9a5-aca3dbc11d41',
+  promotora: '20202020-4a71-41b0-9f83-9cdcca3f8b14', 
   custom: '20202020-41c1-4c9a-8c75-be0971ef89af',
 };
 
@@ -532,8 +563,9 @@ export const WORKSPACE_MEMBER_STANDARD_FIELD_IDS = {
   assignedActivities: '20202020-5c97-42b6-8ca9-c07622cbb33f',
   assignedTasks: '20202020-61dc-4a1c-99e8-38ebf8d2bbeb',
   favorites: '20202020-f3c1-4faf-b343-cf7681038757',
-  accountOwnerForCompanies: '20202020-dc29-4bd4-a3c1-29eafa324bee',
-  authoredAttachments: '20202020-000f-4947-917f-1b09851024fe',
+  accountOwnerForCompanies: '20202020-a0a0-4000-8000-000000000011',
+  accountOwnerForPromotoras: '20202020-a0a0-4000-8000-000000000022',
+  authoredAttachments: '20202020-a0a0-4000-8000-000000000004',
   authoredComments: '20202020-5536-4f59-b837-51c45ef43b05',
   connectedAccounts: '20202020-e322-4bde-a525-727079b4a100',
   messageParticipants: '20202020-8f99-48bc-a5eb-edd33dd54188',
@@ -541,7 +573,7 @@ export const WORKSPACE_MEMBER_STANDARD_FIELD_IDS = {
   calendarEventParticipants: '20202020-0dbc-4841-9ce1-3e793b5b3512',
   timelineActivities: '20202020-e15b-47b8-94fe-8200e3c66615',
   auditLogs: '20202020-2f54-4739-a5e2-99563385e83d',
-  messageThreadSubscribers: '20202020-4b3b-4b3b-9b3b-3b3b3b3b3b3b',
+  messageThreadSubscribers: '20202020-4b3b-4b3b-9b3b-3b3b3b3b3b3',
   timeZone: '20202020-2d33-4c21-a86e-5943b050dd54',
   dateFormat: '20202020-af13-4e11-b1e7-b8cf5ea13dc0',
   timeFormat: '20202020-8acb-4cf8-a851-a6ed443c8d81',
@@ -576,6 +608,7 @@ export const STANDARD_OBJECT_FIELD_IDS = {
   calendarEvent: CALENDAR_EVENT_STANDARD_FIELD_IDS,
   comment: COMMENT_STANDARD_FIELD_IDS,
   company: COMPANY_STANDARD_FIELD_IDS,
+  promotora: PROMOTORA_STANDARD_FIELD_IDS,
   connectedAccount: CONNECTED_ACCOUNT_STANDARD_FIELD_IDS,
   favorite: FAVORITE_STANDARD_FIELD_IDS,
   auditLog: AUDIT_LOGS_STANDARD_FIELD_IDS,

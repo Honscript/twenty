@@ -19,6 +19,7 @@ import { NoteTargetWorkspaceEntity } from 'src/modules/note/standard-objects/not
 import { NoteWorkspaceEntity } from 'src/modules/note/standard-objects/note.workspace-entity';
 import { OpportunityWorkspaceEntity } from 'src/modules/opportunity/standard-objects/opportunity.workspace-entity';
 import { PersonWorkspaceEntity } from 'src/modules/person/standard-objects/person.workspace-entity';
+import { PromotoraWorkspaceEntity } from 'src/modules/promotora/standard-objects/promotora.workspace-entity';
 import { TaskTargetWorkspaceEntity } from 'src/modules/task/standard-objects/task-target.workspace-entity';
 import { TaskWorkspaceEntity } from 'src/modules/task/standard-objects/task.workspace-entity';
 import { TimelineActivityWorkspaceEntity } from 'src/modules/timeline/standard-objects/timeline-activity.workspace-entity';
@@ -73,6 +74,7 @@ export const standardObjectMetadataDefinitions = [
   NoteTargetWorkspaceEntity,
   OpportunityWorkspaceEntity,
   PersonWorkspaceEntity,
+  PromotoraWorkspaceEntity,
   TaskWorkspaceEntity,
   TaskTargetWorkspaceEntity,
 ];

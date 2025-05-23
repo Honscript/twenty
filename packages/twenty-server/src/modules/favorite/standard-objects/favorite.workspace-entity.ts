@@ -22,6 +22,7 @@ import { FavoriteFolderWorkspaceEntity } from 'src/modules/favorite-folder/stand
 import { NoteWorkspaceEntity } from 'src/modules/note/standard-objects/note.workspace-entity';
 import { OpportunityWorkspaceEntity } from 'src/modules/opportunity/standard-objects/opportunity.workspace-entity';
 import { PersonWorkspaceEntity } from 'src/modules/person/standard-objects/person.workspace-entity';
+import { PromotoraWorkspaceEntity } from 'src/modules/promotora/standard-objects/promotora.workspace-entity';
 import { TaskWorkspaceEntity } from 'src/modules/task/standard-objects/task.workspace-entity';
 import { ViewWorkspaceEntity } from 'src/modules/view/standard-objects/view.workspace-entity';
 import { WorkflowRunWorkspaceEntity } from 'src/modules/workflow/common/standard-objects/workflow-run.workspace-entity';
@@ -226,6 +227,22 @@ export class FavoriteWorkspaceEntity extends BaseWorkspaceEntity {
 
   @WorkspaceJoinColumn('view')
   viewId: string;
+
+  @WorkspaceRelation({
+    standardId: FAVORITE_STANDARD_FIELD_IDS.promotora,
+    type: RelationType.MANY_TO_ONE,
+    label: msg`Promotora`,
+    description: msg`Favorite promotora`,
+    icon: 'IconBuildingStore',
+    inverseSideTarget: () => PromotoraWorkspaceEntity,
+    inverseSideFieldKey: 'favorites',
+    onDelete: RelationOnDeleteAction.CASCADE,
+  })
+  @WorkspaceIsNullable()
+  promotora: Relation<PromotoraWorkspaceEntity> | null;
+
+  @WorkspaceJoinColumn('promotora')
+  promotoraId: string;
 
   @WorkspaceDynamicRelation({
     type: RelationType.MANY_TO_ONE,

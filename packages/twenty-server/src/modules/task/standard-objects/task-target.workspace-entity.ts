@@ -1,8 +1,8 @@
 import { msg } from '@lingui/core/macro';
 
+import { RelationOnDeleteAction } from 'src/engine/metadata-modules/field-metadata/interfaces/relation-on-delete-action.interface';
 import { RelationType } from 'src/engine/metadata-modules/field-metadata/interfaces/relation-type.interface';
 import { Relation } from 'src/engine/workspace-manager/workspace-sync-metadata/interfaces/relation.interface';
-import { RelationOnDeleteAction } from 'src/engine/metadata-modules/field-metadata/interfaces/relation-on-delete-action.interface';
 
 import { BaseWorkspaceEntity } from 'src/engine/twenty-orm/base.workspace-entity';
 import { CustomWorkspaceEntity } from 'src/engine/twenty-orm/custom.workspace-entity';
@@ -18,6 +18,7 @@ import { STANDARD_OBJECT_IDS } from 'src/engine/workspace-manager/workspace-sync
 import { CompanyWorkspaceEntity } from 'src/modules/company/standard-objects/company.workspace-entity';
 import { OpportunityWorkspaceEntity } from 'src/modules/opportunity/standard-objects/opportunity.workspace-entity';
 import { PersonWorkspaceEntity } from 'src/modules/person/standard-objects/person.workspace-entity';
+import { PromotoraWorkspaceEntity } from 'src/modules/promotora/standard-objects/promotora.workspace-entity';
 import { TaskWorkspaceEntity } from 'src/modules/task/standard-objects/task.workspace-entity';
 
 @WorkspaceEntity({
@@ -93,6 +94,22 @@ export class TaskTargetWorkspaceEntity extends BaseWorkspaceEntity {
 
   @WorkspaceJoinColumn('opportunity')
   opportunityId: string | null;
+
+  @WorkspaceRelation({
+    standardId: TASK_TARGET_STANDARD_FIELD_IDS.promotora, 
+    type: RelationType.MANY_TO_ONE,
+    label: msg`Promotora`,
+    description: msg`TaskTarget promotora`,
+    icon: 'IconBuildingStore',
+    inverseSideTarget: () => PromotoraWorkspaceEntity,
+    inverseSideFieldKey: 'taskTargets',
+    onDelete: RelationOnDeleteAction.CASCADE,
+  })
+  @WorkspaceIsNullable()
+  promotora: Relation<PromotoraWorkspaceEntity> | null;
+
+  @WorkspaceJoinColumn('promotora')
+  promotoraId: string | null;
 
   @WorkspaceDynamicRelation({
     type: RelationType.MANY_TO_ONE,
